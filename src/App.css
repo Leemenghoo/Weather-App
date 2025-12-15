@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Momo Trust Display", sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  background-image: url(./assets/mountains-winter-daytime-glacier-blue-mountain-range-5k-6000x3376-1248.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  backdrop-filter: blur(80px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 650px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #3c4f5c;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: rgba(42, 101, 120, 0.315);
+}
+.search-input::placeholder {
+  color: #3c4f5c91;
+}
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.error-box {
+  background-color: rgba(231, 77, 60, 0.809);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-box {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.welcome-box h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.welcome-box p {
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+.weather-display {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.weather-text {
+  flex: 1;
+}
+
+.weather-icon {
+  width: 180px;
+  height: 180px;
+}
+
+.weather-text h2 {
+  color: #3c4f5c;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.weather-text h1 {
+  color: #3c4f5c;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.temperature {
+  color: #3c4f5c;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.weather-desc {
+  color: #3c4f5c;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.forecast-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.forecast-item {
+  box-shadow: 0 0 20px rgba(61, 56, 56, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.forecast-item h3 {
+  color: #3c4f5c;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.forecast-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.forecast-item p {
+  color: #dbe2e7;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .weather-display {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .weather-text {
+    text-align: center;
+  }
+
+  .weather-text h1 {
+    text-align: center;
+  }
+
+  .forecast-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-icon {
+    width: 120px;
+    height: 120px;
+  }
+}
